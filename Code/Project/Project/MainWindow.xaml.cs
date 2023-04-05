@@ -29,13 +29,14 @@ namespace Project
         {
             bool nameValidationResult = ValidateProjectName(ProjectNameInput.Text);
 
-            if(true == nameValidationResult)
+            Console.WriteLine("AddParticipantsPage");
+            if (true == nameValidationResult)
             {
                 ErrorTextOutput.Text = "";
                 Global.ProjectName = ProjectNameInput.Text;
 
-                IAddParticipantPage addParticipantPage = new AddParticipantsPage();
-                addParticipantPage.NewParticipantPage();
+                IAddParticipantsPage addParticipantPage = new AddParticipantsPage();
+                addParticipantPage.NewParticipantsPage();
             }
             else
             {

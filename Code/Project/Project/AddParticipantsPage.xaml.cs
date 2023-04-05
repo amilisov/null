@@ -18,12 +18,16 @@ namespace Project
     /// <summary>
     /// Interaction logic for AddParticipantsPage.xaml
     /// </summary>
-    public partial class AddParticipantsPage : Page, IAddParticipantPage
+    public partial class AddParticipantsPage : Page, IAddParticipantsPage
     {
-        public void NewParticipantPage()
+        public void NewParticipantsPage()
         {
-            throw new NotImplementedException();
             InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(this);
         }
     }
 }
