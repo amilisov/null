@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,17 @@ namespace Project
     /// </summary>
     public partial class AddParticipantsPage : Page, IAddParticipantsPage
     {
-        uint numberOfcrollListItems = 0;
-        public string ProjectName { get { return Global.ProjectName; } }
+        public static string ProjectName { get { return Global.ProjectName; } }
+        public ObservableCollection<string> ScrollViewItems { get; set; }
+
+        public AddParticipantsPage()
+        {
+            ScrollViewItems = new ObservableCollection<string>();
+        }
+
         public void NewParticipantsPage(object parent)
         {
+
             InitializeComponent();
 
             this.DataContext = this;
@@ -33,8 +41,7 @@ namespace Project
         {
             if(false == string.IsNullOrEmpty(PersonNameInput.Text))
             {
-                NamesListOutput.Children.Add(CreateScrollListChild(PersonNameInput.Text));
-                numberOfcrollListItems++;
+                ScrollViewItems.Add(PersonNameInput.Text);
             }
             else
             {
@@ -42,20 +49,12 @@ namespace Project
             }
         }
 
-        UIElement CreateScrollListChild(string text)
-        {
-            TextBlock child = new TextBlock();
-            child.Text = text;
-            child.HorizontalAlignment = HorizontalAlignment.Center;
-            return child;
-        }
-
         private void NextPageButton(object sender, RoutedEventArgs e)
         {
-            if(numberOfcrollListItems > 0)
+            if(ScrollViewItems.Count > 0)
             {
                 INewTaskPage newTaskPage = new NewTaskPage();
-                newTaskPage.NewTaskPage(this);
+                newTaskPage.NewTaskPage(this, ScrollViewItems.ToList());
             }
         }
     }

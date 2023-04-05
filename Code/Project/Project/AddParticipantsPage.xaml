@@ -48,9 +48,11 @@
         <ScrollViewer Grid.Column="1" Grid.ColumnSpan="3"
                       Grid.Row="2"  Grid.RowSpan="4"
                       VerticalScrollBarVisibility="Auto">
-            <StackPanel HorizontalAlignment="Center"
-                        x:Name="NamesListOutput">
-            </StackPanel>
+            <ItemsControl  HorizontalAlignment="Stretch"
+                        x:Name="NamesListOutput"
+                        ItemsSource="{Binding ScrollViewItems}"
+                        Margin="50 0 50 0">
+            </ItemsControl>
         </ScrollViewer>
         
         <Button VerticalAlignment="Center" HorizontalAlignment="Center"

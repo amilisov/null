@@ -25,7 +25,7 @@ namespace Project
             InitializeComponent();
         }
 
-        void INewTaskPage.NewTaskPage(object parent)
+        void INewTaskPage.NewTaskPage(object parent, List<string> children)
         {
             throw new NotImplementedException();
         }
