@@ -20,14 +20,43 @@ namespace Project
     /// </summary>
     public partial class AddParticipantsPage : Page, IAddParticipantsPage
     {
-        public void NewParticipantsPage()
+        uint numberOfcrollListItems = 0;
+        public string ProjectName { get { return Global.ProjectName; } }
+        public void NewParticipantsPage(object parent)
         {
             InitializeComponent();
+
+            this.DataContext = this;
+            ((Window)parent).Content = this;
+        }
+        private void AddPersonButton(object sender, RoutedEventArgs e)
+        {
+            if(false == string.IsNullOrEmpty(PersonNameInput.Text))
+            {
+                NamesListOutput.Children.Add(CreateScrollListChild(PersonNameInput.Text));
+                numberOfcrollListItems++;
+            }
+            else
+            {
+
+            }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        UIElement CreateScrollListChild(string text)
         {
-            this.NavigationService.Navigate(this);
+            TextBlock child = new TextBlock();
+            child.Text = text;
+            child.HorizontalAlignment = HorizontalAlignment.Center;
+            return child;
+        }
+
+        private void NextPageButton(object sender, RoutedEventArgs e)
+        {
+            if(numberOfcrollListItems > 0)
+            {
+                INewTaskPage newTaskPage = new NewTaskPage();
+                newTaskPage.NewTaskPage(this);
+            }
         }
     }
 }

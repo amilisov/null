@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    public interface IAddParticipantsPage
+    internal interface INewTaskPage
     {
-        public void NewParticipantsPage(object parent);
+        public void NewTaskPage(object parent);
     }
 }
