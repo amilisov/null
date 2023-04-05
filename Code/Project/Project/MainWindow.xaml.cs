@@ -24,5 +24,34 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool nameValidationResult = ValidateProjectName(ProjectNameInput.Text);
+
+            if(true == nameValidationResult)
+            {
+                ErrorTextOutput.Text = "";
+                Global.ProjectName = ProjectNameInput.Text;
+
+                IAddParticipantPage addParticipantPage = new AddParticipantsPage();
+                addParticipantPage.NewParticipantPage();
+            }
+            else
+            {
+                ErrorTextOutput.Text = "Invalid project name";
+            }
+        }
+        static bool ValidateProjectName(string name)
+        {
+            if (string.IsNullOrEmpty(name))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
