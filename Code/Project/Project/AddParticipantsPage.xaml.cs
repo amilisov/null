@@ -20,11 +20,6 @@ namespace Project
     /// </summary>
     public partial class AddParticipantsPage : Page, IAddParticipantPage
     {
-        public AddParticipantsPage()
-        {
-            InitializeComponent();
-        }
-
         public void NewParticipantPage()
         {
             throw new NotImplementedException();
