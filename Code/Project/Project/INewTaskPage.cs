@@ -8,6 +8,6 @@ namespace Project
 {
     internal interface INewTaskPage
     {
-        public void NewTaskPage(object parent, List<string> children);
+        public void NewTaskPage(List<string> children);
     }
 }

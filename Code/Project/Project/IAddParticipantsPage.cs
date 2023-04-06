@@ -8,6 +8,6 @@ namespace Project
 {
     public interface IAddParticipantsPage
     {
-        public void NewParticipantsPage(object parent);
+        public void NewParticipantsPage();
     }
 }
