@@ -11,6 +11,7 @@ namespace Project
     public static class Global
     {
         public static string ProjectName = "";
+        public static string ScrumMasterName = "";
         public static Window? Window = null;
         static Global()
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -49,6 +50,13 @@ namespace Project
             else
             {
 
+            }
+        }
+        private void RemovePersonButton(object sender, RoutedEventArgs e)
+        {
+            if(ScrollViewItems.Count > 0)
+            {
+                ScrollViewItems.Remove(ScrollViewItems.Last());
             }
         }
 
