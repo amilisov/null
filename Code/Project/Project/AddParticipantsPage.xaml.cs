@@ -29,13 +29,16 @@ namespace Project
             ScrollViewItems = new ObservableCollection<string>();
         }
 
-        public void NewParticipantsPage(object parent)
+        public void NewParticipantsPage()
         {
-
+            if (null == Global.Window)
+            {
+                return;
+            }
             InitializeComponent();
 
             this.DataContext = this;
-            ((Window)parent).Content = this;
+            Global.Window.Content = this;
         }
         private void AddPersonButton(object sender, RoutedEventArgs e)
         {
@@ -54,7 +57,7 @@ namespace Project
             if(ScrollViewItems.Count > 0)
             {
                 INewTaskPage newTaskPage = new NewTaskPage();
-                newTaskPage.NewTaskPage(this, ScrollViewItems.ToList());
+                newTaskPage.NewTaskPage(ScrollViewItems.ToList());
             }
         }
     }

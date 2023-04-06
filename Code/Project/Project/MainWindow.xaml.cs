@@ -23,6 +23,7 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+            Global.Window = this;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,7 @@ namespace Project
                 Global.ProjectName = ProjectNameInput.Text;
 
                 IAddParticipantsPage addParticipantPage = new AddParticipantsPage();
-                addParticipantPage.NewParticipantsPage(this);
+                addParticipantPage.NewParticipantsPage();
             }
             else
             {
