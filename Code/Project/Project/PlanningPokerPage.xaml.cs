@@ -16,16 +16,12 @@ using System.Windows.Shapes;
 namespace Project
 {
     /// <summary>
-    /// Interaction logic for NewTaskPage.xaml
+    /// Interaction logic for PlanningPokerPage.xaml
     /// </summary>
-    public partial class NewTaskPage : Page, INewTaskPage
+    public partial class PlanningPokerPage : Page, IPlanningPokerPage
     {
-        private List<string> employees = new List<string>();
-
-        void INewTaskPage.NewTaskPage(List<string> children)
+        public void NewPlanningPokerPage(string taskName, string taskDescription, List<string> employeeList)
         {
-            employees = children;
-
             if (null == Global.Window)
             {
                 return;
@@ -34,16 +30,6 @@ namespace Project
 
             this.DataContext = this;
             Global.Window.Content = this;
-        }
-
-        private void NextPageButton(object sender, RoutedEventArgs e)
-        {
-            if (!(string.IsNullOrEmpty(TaskName.Text) || 
-                  string.IsNullOrEmpty(TaskDescription.Text)))
-            {
-                IPlanningPokerPage newPokerPage = new PlanningPokerPage();
-                newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
-            }
         }
     }
 }

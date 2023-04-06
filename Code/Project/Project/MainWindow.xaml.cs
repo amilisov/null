@@ -28,12 +28,13 @@ namespace Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool nameValidationResult = ValidateProjectName(ProjectNameInput.Text);
-
+            bool nameValidationResult = (ValidateName(ProjectNameInput.Text) && ValidateName(ScrumMasterName.Text));
+            
             if (true == nameValidationResult)
             {
                 ErrorTextOutput.Text = "";
                 Global.ProjectName = ProjectNameInput.Text;
+                Global.ScrumMasterName = ScrumMasterName.Text;
 
                 IAddParticipantsPage addParticipantPage = new AddParticipantsPage();
                 addParticipantPage.NewParticipantsPage();
@@ -43,7 +44,7 @@ namespace Project
                 ErrorTextOutput.Text = "Invalid project name";
             }
         }
-        static bool ValidateProjectName(string name)
+        static bool ValidateName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
