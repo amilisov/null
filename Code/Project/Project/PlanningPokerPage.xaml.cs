@@ -20,8 +20,16 @@ namespace Project
     /// </summary>
     public partial class PlanningPokerPage : Page, IPlanningPokerPage
     {
+        private string taskName = "";
+        private string taskDescription = "";
+        private List<string> employeeList = new List<string>();
+
         public void NewPlanningPokerPage(string taskName, string taskDescription, List<string> employeeList)
         {
+            this.taskName = taskName;
+            this.taskDescription = taskDescription;
+            this.employeeList = employeeList;
+
             if (null == Global.Window)
             {
                 return;
@@ -31,5 +39,8 @@ namespace Project
             this.DataContext = this;
             Global.Window.Content = this;
         }
+
+        public string TaskName { get {  return taskName; } }
+        public string TaskDescription { get {  return taskDescription; } }
     }
 }

@@ -9,6 +9,33 @@
       Title="PlanningPokerPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
+                   TextAlignment="Center" FontSize="18">
+           Task: <Run Text = "{Binding TaskName, Mode=OneTime}"   />!
+        </TextBlock>
+        <ScrollViewer Grid.Column="2" Grid.ColumnSpan="3"
+                      Grid.Row="2"  Grid.RowSpan="3"
+                      VerticalScrollBarVisibility="Auto">
+            <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3"
+                       TextAlignment="Center" FontSize="18" TextWrapping="Wrap" >
+               Description: <Run Text = "{Binding TaskDescription, Mode=OneTime}"   /> !
+            </TextBlock>
+        </ScrollViewer>
     </Grid>
 </Page>
