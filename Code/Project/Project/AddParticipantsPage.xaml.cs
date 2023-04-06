@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,12 +19,43 @@ namespace Project
     /// <summary>
     /// Interaction logic for AddParticipantsPage.xaml
     /// </summary>
-    public partial class AddParticipantsPage : Page, IAddParticipantPage
+    public partial class AddParticipantsPage : Page, IAddParticipantsPage
     {
-        public void NewParticipantPage()
+        public static string ProjectName { get { return Global.ProjectName; } }
+        public ObservableCollection<string> ScrollViewItems { get; set; }
+
+        public AddParticipantsPage()
         {
-            throw new NotImplementedException();
+            ScrollViewItems = new ObservableCollection<string>();
+        }
+
+        public void NewParticipantsPage(object parent)
+        {
+
             InitializeComponent();
+
+            this.DataContext = this;
+            ((Window)parent).Content = this;
+        }
+        private void AddPersonButton(object sender, RoutedEventArgs e)
+        {
+            if(false == string.IsNullOrEmpty(PersonNameInput.Text))
+            {
+                ScrollViewItems.Add(PersonNameInput.Text);
+            }
+            else
+            {
+
+            }
+        }
+
+        private void NextPageButton(object sender, RoutedEventArgs e)
+        {
+            if(ScrollViewItems.Count > 0)
+            {
+                INewTaskPage newTaskPage = new NewTaskPage();
+                newTaskPage.NewTaskPage(this, ScrollViewItems.ToList());
+            }
         }
     }
 }
