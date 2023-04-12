@@ -81,7 +81,7 @@ namespace Project
                 {
                     ProjectName = Global.ProjectName,
                     ScrumMasterName = Global.ScrumMasterName,
-                    CurrentDate = DateTime.Today,
+                    CurrentDate = DateTime.Now.ToString(),
                     TaskCount = Global.Tasks.Count,
                     Tasks = Global.Tasks
                 };
@@ -103,13 +103,13 @@ namespace Project
     {
         private string projectName = "";
         private string scrumMasterName = "";
-        private DateTime currentDate;
+        private string currentDate = "";
         private int taskCount;
         private List<Task> tasks = new List<Task>();
 
         public string ProjectName { get { return projectName; } set { projectName = value; } }
         public string ScrumMasterName { get { return scrumMasterName; } set {  scrumMasterName = value; } }
-        public DateTime CurrentDate { get {  return currentDate; } set {  currentDate = value; } }
+        public string CurrentDate { get {  return currentDate; } set {  currentDate = value; } }
         public int TaskCount { get {  return taskCount; } set {  taskCount = value; } }
         public List<Task> Tasks { get {  return tasks; } set { tasks = value; } }
     }
