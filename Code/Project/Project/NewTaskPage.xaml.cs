@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,9 @@ namespace Project
     /// </summary>
     public partial class NewTaskPage : Page, INewTaskPage
     {
-        private List<string> employees = new List<string>();
+        private ObservableCollection<string> employees = new ObservableCollection<string>();
 
-        void INewTaskPage.NewTaskPage(List<string> children)
+        void INewTaskPage.NewTaskPage(ObservableCollection<string> children)
         {
             employees = children;
 

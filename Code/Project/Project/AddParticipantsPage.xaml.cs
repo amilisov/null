@@ -65,7 +65,7 @@ namespace Project
             if(ScrollViewItems.Count > 0)
             {
                 INewTaskPage newTaskPage = new NewTaskPage();
-                newTaskPage.NewTaskPage(ScrollViewItems.ToList());
+                newTaskPage.NewTaskPage(ScrollViewItems);
             }
         }
     }

@@ -12,6 +12,7 @@ namespace Project
     {
         public static string ProjectName = "";
         public static string ScrumMasterName = "";
+        public static List<Task> Tasks = new List<Task>();
         public static Window? Window = null;
         static Global()
         {
