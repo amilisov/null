@@ -39,8 +39,8 @@ namespace Project
 
         private void NextPageButton(object sender, RoutedEventArgs e)
         {
-            if (!(string.IsNullOrEmpty(TaskName.Text) || 
-                  string.IsNullOrEmpty(TaskDescription.Text)))
+            if (Global.ValidateText(TaskName.Text) &&
+                Global.ValidateText(TaskDescription.Text))
             {
                 if (null == Global.Tasks.FirstOrDefault(x => string.Equals(x.Name, TaskName.Text)))
                 {

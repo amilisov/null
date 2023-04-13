@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Project
 {
@@ -45,7 +46,7 @@ namespace Project
         }
         private void AddPersonButton(object sender, RoutedEventArgs e)
         {
-            if(false == string.IsNullOrEmpty(PersonNameInput.Text))
+            if(true == Global.ValidateText(PersonNameInput.Text))
             {
                 if (null == ScrollViewItems.FirstOrDefault(x => string.Equals(x, PersonNameInput.Text)))
                 {
@@ -59,7 +60,7 @@ namespace Project
             }
             else
             {
-
+                MessageBox.Show("Name cannot be empty", "Participant without name");
             }
         }
         private void RemovePersonButton(object sender, RoutedEventArgs e)

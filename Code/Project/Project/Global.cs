@@ -17,5 +17,16 @@ namespace Project
         static Global()
         {
         }
+        public static bool ValidateText(string text)
+        {
+            if (string.IsNullOrEmpty(text.Trim()))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
     }
 }
