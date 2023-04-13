@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,7 +47,15 @@ namespace Project
         {
             if(false == string.IsNullOrEmpty(PersonNameInput.Text))
             {
-                ScrollViewItems.Add(PersonNameInput.Text);
+                if (null == ScrollViewItems.FirstOrDefault(x => string.Equals(x, PersonNameInput.Text)))
+                {
+                    ScrollViewItems.Add(PersonNameInput.Text);
+                    PersonNameInput.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Participant present in list! Please input a different name", "Participant present");  
+                }
             }
             else
             {
@@ -66,6 +76,14 @@ namespace Project
             {
                 INewTaskPage newTaskPage = new NewTaskPage();
                 newTaskPage.NewTaskPage(ScrollViewItems);
+            }
+        }
+
+        private void Input_EnterKeyPressed(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                AddPersonButton(sender, new RoutedEventArgs());
             }
         }
     }

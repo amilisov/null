@@ -8,6 +8,6 @@ namespace Project
 {
     public interface IFileWritePage
     {
-        public void NewFileWritePage();
+        public void NewFileWritePage(List<string> employees);
     }
 }

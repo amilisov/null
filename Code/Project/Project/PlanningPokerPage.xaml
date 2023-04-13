@@ -37,7 +37,8 @@
                       Grid.Row="2"  Grid.RowSpan="3"
                       VerticalScrollBarVisibility="Auto">
             <TextBlock TextAlignment="Center" FontSize="18" TextWrapping="Wrap"  Margin="0 5 0 20">
-               Description: <Run Text = "{Binding TaskDescription, Mode=OneTime}"/>
+               Description: <LineBreak/>
+                <Run Text = "{Binding TaskDescription, Mode=OneTime}"/>
             </TextBlock>
         </ScrollViewer>
 
@@ -50,7 +51,7 @@
         
         <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
                    TextAlignment="Center" FontSize="18">
-           Средна оценка: 
+           Оценка на задача: 
             <TextBlock x:Name="AverageRating" Text = "{Binding TaskRating, Mode=OneTime}" />
         </TextBlock>
 

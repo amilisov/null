@@ -23,8 +23,10 @@ namespace Project
     /// </summary>
     public partial class FileWritePage : Page, IFileWritePage
     {
-        public void NewFileWritePage()
+        private List<string> employees = new List<string>();    
+        public void NewFileWritePage(List<string> employees)
         {
+            this.employees = employees;
             if (null == Global.Window)
             {
                 return;
@@ -44,13 +46,20 @@ namespace Project
 
             if(result == DialogResult.OK)
             {
-                string path = dialog.SelectedPath + "\\SCRUM_Session_" + DateTime.Now.ToString("dd/MM/yyyy") + ".txt";
+                string path = dialog.SelectedPath + "\\SCRUM Session " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".txt";
                 StreamWriter writer = new StreamWriter(path);
 
                 writer.WriteLine(DateTime.Now.ToString());
-                writer.WriteLine();
+                writer.WriteLine("==================================");
                 writer.WriteLine("Project: " + Global.ProjectName);
                 writer.WriteLine("SCRUM master: " + Global.ScrumMasterName);
+                writer.WriteLine("==================================");
+
+                writer.WriteLine("Attendance list:");
+                foreach (var employee in employees)
+                {
+                    writer.WriteLine(employee);
+                }
                 writer.WriteLine("==================================");
 
                 foreach (Task task in Global.Tasks)
@@ -74,7 +83,7 @@ namespace Project
 
             if (result == DialogResult.OK)
             {
-                string path = dialog.SelectedPath + "\\SCRUM_Session_" + DateTime.Now.ToString("dd/MM/yyyy") + ".json";
+                string path = dialog.SelectedPath + "\\SCRUM Session " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".json";
                 StreamWriter writer = new StreamWriter(path);
 
                 JsonOutput json = new JsonOutput
@@ -83,7 +92,8 @@ namespace Project
                     ScrumMasterName = Global.ScrumMasterName,
                     CurrentDate = DateTime.Now.ToString(),
                     TaskCount = Global.Tasks.Count,
-                    Tasks = Global.Tasks
+                    Tasks = Global.Tasks,
+                    Employees = employees
                 };
 
                 writer.WriteLine(JsonConvert.SerializeObject(json, Formatting.Indented));
@@ -101,16 +111,11 @@ namespace Project
 
     internal class JsonOutput
     {
-        private string projectName = "";
-        private string scrumMasterName = "";
-        private string currentDate = "";
-        private int taskCount;
-        private List<Task> tasks = new List<Task>();
-
-        public string ProjectName { get { return projectName; } set { projectName = value; } }
-        public string ScrumMasterName { get { return scrumMasterName; } set {  scrumMasterName = value; } }
-        public string CurrentDate { get {  return currentDate; } set {  currentDate = value; } }
-        public int TaskCount { get {  return taskCount; } set {  taskCount = value; } }
-        public List<Task> Tasks { get {  return tasks; } set { tasks = value; } }
+        public string ProjectName = "";
+        public string ScrumMasterName = "";
+        public string CurrentDate = "";
+        public int TaskCount;
+        public List<Task> Tasks = new List<Task>();
+        public List<string> Employees = new List<string>();
     }
 }

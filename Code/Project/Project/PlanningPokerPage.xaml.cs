@@ -100,46 +100,109 @@ namespace Project
         private void Fibonacci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int val = 0;
+            double sum = 0;
             double avg = 0;
             foreach (var stackPanel in dockPanels)
             {
                 ComboBox dropdown = (ComboBox)stackPanel.Children.OfType<ComboBox>().Single();
                 Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
-                avg += val;
+                sum += val;
             }
 
             if(dockPanels.Count > 0)
             {
-                TaskRating = (int)Math.Ceiling(avg / dockPanels.Count);
+                TaskRating = (int)Math.Ceiling(sum / dockPanels.Count);
+                avg = Math.Round((sum / dockPanels.Count),1);
             }
 
-            AverageRating.Text = TaskRating.ToString();
+            foreach (var num in fibonacciList)
+            {
+                if(num >= TaskRating)
+                {
+                    TaskRating = num;
+                    break;
+                }
+            }
+
+            AverageRating.Text = TaskRating.ToString() + " (" + avg.ToString() + ")";
         }
 
         private void NewTask(object sender, RoutedEventArgs e)
         {
-            Task task = new Task();
-            task.Name = TaskName;
-            task.Description = TaskDescription;
-            task.Rating = TaskRating;
+            int val = -1;
+            int prevVal = -1;
 
-            Global.Tasks.Add(task);
+            Boolean error = false;
+            foreach (var stackPanel in dockPanels)
+            {
+                ComboBox dropdown = (ComboBox)stackPanel.Children.OfType<ComboBox>().Single();
+                Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
+                if(prevVal != -1)
+                {
+                    if(val != prevVal)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+                prevVal = val;
+            }
 
-            INewTaskPage newTaskPage = new NewTaskPage();
-            newTaskPage.NewTaskPage(employeeList);
+            if(error == false)
+            {
+                Task task = new Task();
+                task.Name = TaskName;
+                task.Description = TaskDescription;
+                task.Rating = TaskRating;
+
+                Global.Tasks.Add(task);
+
+                INewTaskPage newTaskPage = new NewTaskPage();
+                newTaskPage.NewTaskPage(employeeList);
+            }
+            else
+            {
+                MessageBox.Show("All participants must agree on a rating to proceed!", "Rating mismatch");
+            }
         }
 
         private void LoadNextPage(object sender, RoutedEventArgs e)
         {
-            Task task = new Task();
-            task.Name = TaskName;
-            task.Description = TaskDescription;
-            task.Rating = TaskRating;
+            int val = -1;
+            int prevVal = -1;
 
-            Global.Tasks.Add(task);
+            Boolean error = false;
+            foreach (var stackPanel in dockPanels)
+            {
+                ComboBox dropdown = (ComboBox)stackPanel.Children.OfType<ComboBox>().Single();
+                Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
+                if (prevVal != -1)
+                {
+                    if (val != prevVal)
+                    {
+                        error = true;
+                        break;
+                    }
+                }
+                prevVal = val;
+            }
 
-            IFileWritePage newFilePage = new FileWritePage();
-            newFilePage.NewFileWritePage();
+            if (error == false)
+            {
+                Task task = new Task();
+                task.Name = TaskName;
+                task.Description = TaskDescription;
+                task.Rating = TaskRating;
+
+                Global.Tasks.Add(task);
+
+                IFileWritePage newFilePage = new FileWritePage();
+                newFilePage.NewFileWritePage(employeeList.ToList());
+            }
+            else
+            {
+                MessageBox.Show("All participants must agree on a rating to proceed!", "Rating mismatch");
+            }
         }
     }
 }

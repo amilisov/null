@@ -42,8 +42,19 @@ namespace Project
             if (!(string.IsNullOrEmpty(TaskName.Text) || 
                   string.IsNullOrEmpty(TaskDescription.Text)))
             {
-                IPlanningPokerPage newPokerPage = new PlanningPokerPage();
-                newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
+                if (null == Global.Tasks.FirstOrDefault(x => string.Equals(x.Name, TaskName.Text)))
+                {
+                    IPlanningPokerPage newPokerPage = new PlanningPokerPage();
+                    newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
+                }
+                else
+                {
+                    MessageBox.Show("Task with the same name already exists!", "Task exists");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Task name or description is empty!", "Task empty");
             }
         }
     }
