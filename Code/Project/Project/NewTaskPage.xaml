@@ -27,15 +27,15 @@
 
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
                    TextAlignment="Center" FontSize="18">
-           Please input Task name and description:
+           Моля, въведете името и описанието на задачата:
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"
                    TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
-           Task name:
+           Име на задача:
         </TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"
                    TextAlignment="Center" FontSize="18">
-           Task description:
+           Описание на задача:
         </TextBlock>
 
         <TextBox Margin="0 20 0 20"
@@ -43,13 +43,13 @@
                  HorizontalAlignment="Stretch"
                  VerticalContentAlignment="Center"
                  x:Name="TaskName">
-            Task name
+            Име на задача
         </TextBox>
         <TextBox
                  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2"
                  HorizontalAlignment="Stretch" TextWrapping="Wrap"
                  x:Name="TaskDescription">
-            Task description
+            Описание на задача
         </TextBox>
 
         <Button VerticalAlignment="Center" HorizontalAlignment="Center"
