@@ -27,20 +27,20 @@
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"
                    HorizontalAlignment="Center" 
                    TextWrapping="Wrap" TextAlignment="Center" FontSize="18">
-            Hello!<LineBreak/>
-            Welcome to Planning Poker!<LineBreak/>
+            Здравейте!<LineBreak/>
+            Добре дошли в Planning Poker!<LineBreak/>
         </TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"
                    HorizontalAlignment="Right" VerticalAlignment="Center"
                    TextWrapping="Wrap" TextAlignment="Center" FontSize="18"
                    Margin="0 0 20 0" >
-            Enter project name:
+            Въведете името на проекта:
         </TextBlock>
         <TextBlock Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2"
                    HorizontalAlignment="Right" VerticalAlignment="Center"
                    TextWrapping="Wrap" TextAlignment="Center" FontSize="18"
                    Margin="0 0 20 0" >
-            Enter Scrum Master name:
+            Въведете името на Scrum Master-а:
         </TextBlock>
         
         <TextBox Grid.Column="2" Grid.Row="2" 
@@ -48,7 +48,7 @@
                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                  Margin="0 20 0 20">
-            Your project name
+            Име на проекта
         </TextBox>
         <TextBox Grid.Column="2" Grid.Row="3" 
                  x:Name="ScrumMasterName" 
