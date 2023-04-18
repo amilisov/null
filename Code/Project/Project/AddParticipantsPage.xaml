@@ -27,9 +27,9 @@
 
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
                    TextAlignment="Center" FontSize="18">
-            Welcome to 
+            Добре дошли в  
             <Run Text = "{Binding ProjectName, Mode=OneTime}"   />! <LineBreak/>
-            Please add your cowerkers:
+            Моля, въведете участниците:
         </TextBlock>
         <DockPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
             <TextBox Margin="0 20 0 20"
@@ -56,11 +56,11 @@
         </Button>
         <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
                 Grid.Row="1" Grid.Column="5" Click="AddPersonButton">
-            Add
+            Добави
         </Button>
         <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
                 Grid.Row="2" Grid.Column="5" Click="RemovePersonButton">
-            Remove Last
+            Премахни последния
         </Button>
     </Grid>
 </Page>
