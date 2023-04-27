@@ -1,4 +1,4 @@
-﻿<Page x:Class="Project.PlanningPokerPage"
+<Page x:Class="Project.PlanningPokerPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -25,17 +25,48 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
+        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3"
+                   TextAlignment="Center" FontSize="18">
+           Scrum master: <Run Text = "{Binding ScrumMasterName, Mode=OneTime}"/>
+        </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
                    TextAlignment="Center" FontSize="18">
-           Задача: <Run Text = "{Binding TaskName, Mode=OneTime}"   />!
-        </TextBlock>
+           Задача: <Run Text = "{Binding TaskName, Mode=OneTime}"/>
+        </TextBlock>a
         <ScrollViewer Grid.Column="2" Grid.ColumnSpan="3"
                       Grid.Row="2"  Grid.RowSpan="3"
                       VerticalScrollBarVisibility="Auto">
-            <TextBlock Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3"
-                       TextAlignment="Center" FontSize="18" TextWrapping="Wrap" >
-               Описание: <Run Text = "{Binding TaskDescription, Mode=OneTime}"   /> !
+            <TextBlock TextAlignment="Center" FontSize="18" TextWrapping="Wrap"  Margin="0 5 0 20">
+               Описание: <LineBreak/>
+                <Run Text = "{Binding TaskDescription, Mode=OneTime}"/>
             </TextBlock>
         </ScrollViewer>
+
+        <ScrollViewer x:Name="Scroller" Grid.Column="0" Grid.ColumnSpan="2"
+                      Grid.Row="0"  Grid.RowSpan="5"
+                      VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="Dock" Margin="20 20 20 20" Orientation="Vertical">
+            </StackPanel>
+        </ScrollViewer>
+        
+        <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
+                   TextAlignment="Center" FontSize="18">
+           Оценка на задача: 
+            <TextBlock x:Name="AverageRating" Text = "{Binding TaskRating, Mode=OneTime}" />
+        </TextBlock>
+
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="4" Click="LoadNextPage">
+            Приключване
+        </Button>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="3" Click="NewTask">
+            Оценяване на нова задача
+        </Button>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="2" Click="ClearSelection">
+            Повторно оценяване
+        </Button>
+
     </Grid>
 </Page>

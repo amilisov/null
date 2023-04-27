@@ -1,0 +1,50 @@
+﻿<Page x:Class="Project.FileWritePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="FileWritePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
+                   TextAlignment="Center" FontSize="18">
+           Успешно създадохте <Run Text = "{Binding TaskCount, Mode=OneTime}"/> задачи
+        </TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                   TextAlignment="Center" FontSize="18">
+           Ако желаете, можете да запишете задачите във файлове
+        </TextBlock>
+
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="1" Click="TxtExport">
+            Извеждане като .txt файл
+        </Button>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="2" Click="JsonExport">
+            Извеждане като .json файл
+        </Button>
+        <Button VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Grid.Row="6" Grid.Column="3" Click="ExitPoker">
+            Изход
+        </Button>
+    </Grid>
+</Page>
