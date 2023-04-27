@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project
+namespace Project.Interfaces
 {
-    public class Task
+    public interface IFileWritePage
     {
-        public string Name = "";
-        public string Description = "";
-        public int Rating;
+        public void NewFileWritePage(List<string> employees);
     }
 }
