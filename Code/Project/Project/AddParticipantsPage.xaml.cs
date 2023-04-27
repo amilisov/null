@@ -46,7 +46,7 @@ namespace Project
             this.DataContext = this;
             Global.Window.Content = this;
         }
-        private void AddPersonButton(object sender, RoutedEventArgs e)
+        public void AddPersonButton(object sender, RoutedEventArgs e)
         {
             if(true == Global.ValidateText(PersonNameInput.Text))
             {
@@ -65,7 +65,7 @@ namespace Project
                 MessageBox.Show("Name cannot be empty", "Participant without name");
             }
         }
-        private void RemovePersonButton(object sender, RoutedEventArgs e)
+        public void RemovePersonButton(object sender, RoutedEventArgs e)
         {
             if(ScrollViewItems.Count > 0)
             {

@@ -29,8 +29,8 @@ namespace Project
         private string taskDescription = "";
         private int taskRating = 0;
         private ObservableCollection<string> employeeList = new ObservableCollection<string>();
-        private ObservableCollection<int> fibonnaciList = new ObservableCollection<int>() {0, 1, 2, 3, 5, 8, 13, 20, 40, 100};
-        private List<DockPanel> dockPanels = new List<DockPanel>();
+        public readonly ObservableCollection<int> fibonnaciList = new ObservableCollection<int>() {0, 1, 2, 3, 5, 8, 13, 20, 40, 100};
+        public readonly List<DockPanel> dockPanels = new List<DockPanel>();
 
         public void NewPlanningPokerPage(string taskName, string taskDescription, ObservableCollection<string> employeeList)
         {
@@ -83,15 +83,13 @@ namespace Project
             this.DataContext = this;
             Global.Window.Content = this;
         }
-
         public string TaskName { get {  return taskName; } }
         public string TaskDescription { get {  return taskDescription; } }
         public ObservableCollection<string> EmployeeList { get {  return employeeList; } }
         public ObservableCollection<int> fibonacciList { get { return fibonnaciList; } }
         public string ScrumMasterName { get { return Global.ScrumMasterName; } }
         public int TaskRating { get { return taskRating; } set { taskRating = value; } }
-
-        private void ClearSelection(object sender, RoutedEventArgs e)
+        public void ClearSelection(object sender, RoutedEventArgs e)
         {
             foreach (var stackPanel in dockPanels)
             {
@@ -99,7 +97,6 @@ namespace Project
                 dropdown.SelectedValue = fibonnaciList[0];
             }
         }
-
         private void Fibonacci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int val = 0;
@@ -129,7 +126,6 @@ namespace Project
 
             AverageRating.Text = TaskRating.ToString() + " (" + avg.ToString() + ")";
         }
-
         private void NewTask(object sender, RoutedEventArgs e)
         {
             int val = -1;
@@ -168,7 +164,6 @@ namespace Project
                 MessageBox.Show("All participants must agree on a rating to proceed!", "Rating mismatch");
             }
         }
-
         private void LoadNextPage(object sender, RoutedEventArgs e)
         {
             int val = -1;
