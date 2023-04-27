@@ -162,7 +162,7 @@ namespace Project
             }
             else
             {
-                MessageBox.Show("All participants must agree on a rating to proceed!", "Rating mismatch");
+                MessageBox.Show("Всички участници трябва да се съгласят на еднаква оценка!", "Разлика в оценките");
             }
         }
 
@@ -201,7 +201,7 @@ namespace Project
             }
             else
             {
-                MessageBox.Show("All participants must agree on a rating to proceed!", "Rating mismatch");
+                MessageBox.Show("Всички участници трябва да се съгласят на еднаква оценка!", "Разлика в оценките");
             }
         }
     }

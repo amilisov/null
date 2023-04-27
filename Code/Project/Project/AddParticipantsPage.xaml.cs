@@ -55,12 +55,12 @@ namespace Project
                 }
                 else
                 {
-                    MessageBox.Show("Participant present in list! Please input a different name", "Participant present");  
+                    MessageBox.Show("Участникът вече е в списъка! Моля въведете друго име.", "Участникът вече е добавен");  
                 }
             }
             else
             {
-                MessageBox.Show("Name cannot be empty", "Participant without name");
+                MessageBox.Show("Невалидно име! \nИмето не трябва да е празно или да започва с число.", "Невалидно име на участник");
             }
         }
         private void RemovePersonButton(object sender, RoutedEventArgs e)

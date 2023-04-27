@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -25,6 +26,13 @@ namespace Project
             }
             else
             {
+                char[] chars = text.ToCharArray();
+
+                if (Char.IsDigit(chars[0]))
+                {
+                    return false;
+                }
+
                 return true;
             }
         }
