@@ -43,13 +43,11 @@
                  HorizontalAlignment="Stretch"
                  VerticalContentAlignment="Center"
                  x:Name="TaskName">
-            Task name
         </TextBox>
         <TextBox
                  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2"
                  HorizontalAlignment="Stretch" TextWrapping="Wrap"
-                 x:Name="TaskDescription">
-            Task description
+                 x:Name="TaskDescription" AcceptsReturn="True">
         </TextBox>
 
         <Button VerticalAlignment="Center" HorizontalAlignment="Center"

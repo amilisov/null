@@ -31,12 +31,15 @@
             <Run Text = "{Binding ProjectName, Mode=OneTime}"   />! <LineBreak/>
             Please add your cowerkers:
         </TextBlock>
-        <DockPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Stretch"
+                   TextAlignment="Center" FontSize="18" Margin="0 20 0 20">
+            Participant name:
+        </TextBlock>
+        <DockPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Stretch">
             <TextBox Margin="0 20 0 20"
                      HorizontalAlignment="Stretch"
                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                     x:Name="PersonNameInput">
-                asdasd
+                     x:Name="PersonNameInput" KeyUp="Input_EnterKeyPressed">
             </TextBox>
         </DockPanel>
 
