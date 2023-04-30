@@ -1,264 +1,308 @@
-<mxfile host="app.diagrams.net" modified="2023-04-06T12:50:36.108Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/111.0" etag="zOubq6NIR4IqIh2RygT3" version="21.1.4" type="device">
+<mxfile host="app.diagrams.net" modified="2023-04-27T12:23:11.861Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="iC4JYvx41laQrd6N3KOw" version="21.2.3" type="device">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="1235" dy="618" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1035" dy="569" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-1" value="Начална страница" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="40" y="40" width="100" height="920" as="geometry" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-1" value="MainWindow" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="100" height="1160" as="geometry" />
         </mxCell>
         <mxCell id="aM9ryv3xv72pqoxQDRHE-2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="aM9ryv3xv72pqoxQDRHE-1" vertex="1">
-          <mxGeometry x="45" y="70" width="10" height="770" as="geometry" />
+          <mxGeometry x="45" y="70" width="10" height="1060" as="geometry" />
         </mxCell>
         <mxCell id="aM9ryv3xv72pqoxQDRHE-3" value="Начало" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="aM9ryv3xv72pqoxQDRHE-1" target="aM9ryv3xv72pqoxQDRHE-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-15" y="70" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value="Страница за въвеждане на участници" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="220" y="40" width="100" height="920" as="geometry" />
+        <mxCell id="aM9ryv3xv72pqoxQDRHE-5" value="AddParticipantsPage:&lt;br&gt;addParticipantPage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};size=40;" parent="1" vertex="1">
+          <mxGeometry x="340" y="40" width="120" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="aM9ryv3xv72pqoxQDRHE-5" vertex="1">
-          <mxGeometry x="45" y="150" width="10" height="660" as="geometry" />
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-1" value="NewTaskPage:&lt;br&gt;newTaskPage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="710" y="40" width="100" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="aM9ryv3xv72pqoxQDRHE-5" target="O8Y2yQ0MNWPU1Q-F4xDI-9" edge="1" source="O8Y2yQ0MNWPU1Q-F4xDI-9">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="60" y="260" as="sourcePoint" />
-            <mxPoint x="170" y="110" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="70" y="260" />
-              <mxPoint x="130" y="260" />
-              <mxPoint x="130" y="230" />
-              <mxPoint x="130" y="170" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-3" value="&lt;div&gt;PlanningPokerPage:&lt;/div&gt;newPokerPage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="1190" y="40" width="120" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-19" value="&lt;div&gt;Добави нов&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-17" vertex="1" connectable="0">
-          <mxGeometry x="-0.0224" relative="1" as="geometry">
-            <mxPoint x="-40" y="35" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-1" value="Страница за въвеждане на задача" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="410" y="40" width="100" height="920" as="geometry" />
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-3" value="&lt;div&gt;Страница за оценяване на задача&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="600" y="40" width="100" height="920" as="geometry" />
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-5" value="Въвеждане име на проект и име на скръм мастър" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-5" value="Въвеждане име на проект и име на SCRUM мастър" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="30" y="120" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-10" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" parent="1" edge="1">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-10" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" parent="1" edge="1" target="O8Y2yQ0MNWPU1Q-F4xDI-9" source="aM9ryv3xv72pqoxQDRHE-2">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="95" y="199" as="sourcePoint" />
-            <mxPoint x="265" y="199" as="targetPoint" />
+            <mxPoint x="290" y="220" as="targetPoint" />
             <Array as="points">
+              <mxPoint x="220" y="190" />
+              <mxPoint x="170" y="210" />
               <mxPoint x="180" y="199" />
               <mxPoint x="250" y="189" />
               <mxPoint x="190" y="229" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-13" value="Напред" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-10" vertex="1" connectable="0">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-13" value="NewParticipantsPage()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-10" vertex="1" connectable="0">
           <mxGeometry x="0.2071" y="-2" relative="1" as="geometry">
-            <mxPoint x="-67" y="-12" as="offset" />
+            <mxPoint x="-16" y="-11" as="offset" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-14" value="Добавяне на участник" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="210" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-26" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-20" target="O8Y2yQ0MNWPU1Q-F4xDI-25" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="550" y="430" />
+              <mxPoint x="850" y="430" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-27" value="Напред" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-26" vertex="1" connectable="0">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-27" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-26" vertex="1" connectable="0">
           <mxGeometry x="0.1444" y="2" relative="1" as="geometry">
-            <mxPoint x="-78" y="-8" as="offset" />
+            <mxPoint x="1" y="-8" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-20" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="455" y="310" width="10" height="510" as="geometry" />
+          <mxGeometry x="755" y="340" width="10" height="810" as="geometry" />
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-21" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-9" target="O8Y2yQ0MNWPU1Q-F4xDI-20" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="370" y="330" />
+              <mxPoint x="690" y="340" />
+              <mxPoint x="500" y="330" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-23" value="Напред" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-21" vertex="1" connectable="0">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-23" value="NewTaskPage(ScrollViewItems)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-21" vertex="1" connectable="0">
           <mxGeometry x="0.5756" y="-2" relative="1" as="geometry">
             <mxPoint x="-107" y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-24" value="Създаване на нова задача" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="400" y="350" width="120" height="60" as="geometry" />
+          <mxGeometry x="700" y="360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-29" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" target="O8Y2yQ0MNWPU1Q-F4xDI-25" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="650" y="540" as="sourcePoint" />
-            <mxPoint x="730" y="420" as="targetPoint" />
+            <mxPoint x="1250" y="540" as="sourcePoint" />
+            <mxPoint x="1330" y="420" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="700" y="540" />
-              <mxPoint x="760" y="540" />
-              <mxPoint x="760" y="440" />
-              <mxPoint x="730" y="440" />
-              <mxPoint x="690" y="440" />
+              <mxPoint x="1300" y="540" />
+              <mxPoint x="1510" y="540" />
+              <mxPoint x="1510" y="440" />
+              <mxPoint x="1330" y="440" />
+              <mxPoint x="1290" y="440" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-30" value="Ново гласуване" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-29" vertex="1" connectable="0">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-30" value="ClearSelection(object sender, RoutedEventArgs e)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-29" vertex="1" connectable="0">
           <mxGeometry x="-0.7271" y="-1" relative="1" as="geometry">
-            <mxPoint x="8" y="-9" as="offset" />
+            <mxPoint x="46" y="-11" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-25" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="645" y="410" width="10" height="390" as="geometry" />
+          <mxGeometry x="1245" y="430" width="10" height="710" as="geometry" />
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-28" value="Оценяване на задачата" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="590" y="460" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-31" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-25" target="O8Y2yQ0MNWPU1Q-F4xDI-40" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="350" y="550" as="sourcePoint" />
-            <mxPoint x="830" y="620" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="740" y="640" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-55" value="Прозорец за край" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-31" vertex="1" connectable="0">
-          <mxGeometry x="-0.4556" relative="1" as="geometry">
-            <mxPoint x="6" y="-10" as="offset" />
-          </mxGeometry>
+          <mxGeometry x="1190" y="450" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-37" value="&lt;div&gt;Записване на данните на&lt;/div&gt;&lt;div&gt;задачата&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="590" y="550" width="120" height="60" as="geometry" />
+          <mxGeometry x="1190" y="550" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-39" value="Страница за запитване за изход" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
-          <mxGeometry x="790" y="40" width="100" height="920" as="geometry" />
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-39" value="FileWritePage:&lt;br&gt;newFilePage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="2470" y="40" width="100" height="1160" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-40" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="O8Y2yQ0MNWPU1Q-F4xDI-39" vertex="1">
-          <mxGeometry x="45" y="560" width="10" height="190" as="geometry" />
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-8" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="O8Y2yQ0MNWPU1Q-F4xDI-39">
+          <mxGeometry x="45" y="890" width="10" height="180" as="geometry" />
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-45" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-40" target="O8Y2yQ0MNWPU1Q-F4xDI-25" edge="1">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-46" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-25" target="4PMqVrFQ4jnjLl5kj5E4-17" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="640" as="sourcePoint" />
-            <mxPoint x="620" y="590" as="targetPoint" />
+            <mxPoint x="870" y="640" as="sourcePoint" />
+            <mxPoint x="920" y="590" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="770" y="720" />
+              <mxPoint x="1330" y="640" />
+              <mxPoint x="1360" y="640" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-56" value="Нова задача" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-45" vertex="1" connectable="0">
-          <mxGeometry x="-0.0333" relative="1" as="geometry">
-            <mxPoint x="-8" y="-10" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-46" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-25" target="O8Y2yQ0MNWPU1Q-F4xDI-20" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="640" as="sourcePoint" />
-            <mxPoint x="620" y="590" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="550" y="740" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-2" value="Нова задача" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8Y2yQ0MNWPU1Q-F4xDI-46">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-2" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-46" vertex="1" connectable="0">
           <mxGeometry x="-0.2549" relative="1" as="geometry">
-            <mxPoint x="-28" y="-10" as="offset" />
+            <mxPoint x="50" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-47" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-20" target="O8Y2yQ0MNWPU1Q-F4xDI-20" edge="1">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-49" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-20" target="O8Y2yQ0MNWPU1Q-F4xDI-9" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="570" y="580" as="sourcePoint" />
-            <mxPoint x="620" y="530" as="targetPoint" />
+            <mxPoint x="440" y="700" as="sourcePoint" />
+            <mxPoint x="410" y="790" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="430" y="750" />
-              <mxPoint x="380" y="750" />
-              <mxPoint x="380" y="340" />
+              <mxPoint x="480" y="1150" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-4" value="Нова задача" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8Y2yQ0MNWPU1Q-F4xDI-47">
-          <mxGeometry x="-0.5943" y="-3" relative="1" as="geometry">
-            <mxPoint x="34" y="28" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-49" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-20" target="O8Y2yQ0MNWPU1Q-F4xDI-9" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="310" y="700" as="sourcePoint" />
-            <mxPoint x="280" y="790" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="370" y="810" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-5" value="Изход" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8Y2yQ0MNWPU1Q-F4xDI-49">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-5" value="NewTaskPage(ScrollViewItems)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-49" vertex="1" connectable="0">
           <mxGeometry x="0.0328" y="-1" relative="1" as="geometry">
             <mxPoint x="1" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-51" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-25" target="O8Y2yQ0MNWPU1Q-F4xDI-20" edge="1">
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-51" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="470" y="700" as="sourcePoint" />
-            <mxPoint x="520" y="650" as="targetPoint" />
+            <mxPoint x="1245" y="1140" as="sourcePoint" />
+            <mxPoint x="765" y="1140" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="560" y="780" />
+              <mxPoint x="890" y="1140" />
+              <mxPoint x="830" y="1140" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-3" value="Изход" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8Y2yQ0MNWPU1Q-F4xDI-51">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-3" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-51" vertex="1" connectable="0">
           <mxGeometry x="0.1242" relative="1" as="geometry">
-            <mxPoint y="-10" as="offset" />
+            <mxPoint x="25" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-52" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-40" target="O8Y2yQ0MNWPU1Q-F4xDI-25" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="470" y="700" as="sourcePoint" />
-            <mxPoint x="520" y="650" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="750" y="760" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-1" value="Изход" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="O8Y2yQ0MNWPU1Q-F4xDI-52">
-          <mxGeometry x="-0.183" y="6" relative="1" as="geometry">
-            <mxPoint x="-21" y="-16" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-53" value="&lt;div&gt;Изход или&lt;/div&gt;&lt;div&gt;&amp;nbsp;нова задача&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="780" y="650" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-9" target="aM9ryv3xv72pqoxQDRHE-2">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-6" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-9" target="aM9ryv3xv72pqoxQDRHE-2" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="240" y="840" as="sourcePoint" />
             <mxPoint x="170" y="840" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="180" y="840" />
+              <mxPoint x="180" y="1160" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-7" value="Изход" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8F0MhI7d2BhW70WeMo5a-6">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-7" value="NewParticipantsPage()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8F0MhI7d2BhW70WeMo5a-6" vertex="1" connectable="0">
           <mxGeometry x="0.2651" y="3" relative="1" as="geometry">
-            <mxPoint x="11" y="-13" as="offset" />
+            <mxPoint x="45" y="-13" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-8" value="" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-8" value="" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
           <mxGeometry x="0.1429" y="120" relative="1" as="geometry">
-            <mxPoint x="90" y="880" as="sourcePoint" />
-            <mxPoint x="20" y="880" as="targetPoint" />
+            <mxPoint x="90" y="1170" as="sourcePoint" />
+            <mxPoint x="10" y="1170" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="60" y="880" />
+              <mxPoint x="60" y="1170" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="8F0MhI7d2BhW70WeMo5a-9" value="Край" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8F0MhI7d2BhW70WeMo5a-8">
+        <mxCell id="8F0MhI7d2BhW70WeMo5a-9" value="Край" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="8F0MhI7d2BhW70WeMo5a-8" vertex="1" connectable="0">
           <mxGeometry x="0.2857" y="2" relative="1" as="geometry">
             <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-9" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="395" y="190" width="10" height="970" as="geometry" />
+        </mxCell>
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" source="O8Y2yQ0MNWPU1Q-F4xDI-9" target="O8Y2yQ0MNWPU1Q-F4xDI-9" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="310" as="sourcePoint" />
+            <mxPoint x="520" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="310" />
+              <mxPoint x="680" y="270" />
+              <mxPoint x="680" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-19" value="&lt;div&gt;AddPersonButton(object sender, RoutedEventArgs e)&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="O8Y2yQ0MNWPU1Q-F4xDI-17" vertex="1" connectable="0">
+          <mxGeometry x="-0.0224" relative="1" as="geometry">
+            <mxPoint x="-140" y="33" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="O8Y2yQ0MNWPU1Q-F4xDI-14" value="Добавяне на участник" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="340" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-6" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1" source="4PMqVrFQ4jnjLl5kj5E4-16" target="4PMqVrFQ4jnjLl5kj5E4-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1920" y="740" />
+              <mxPoint x="1890" y="720" />
+            </Array>
+            <mxPoint x="1300" y="729.41" as="sourcePoint" />
+            <mxPoint x="2100" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-7" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4PMqVrFQ4jnjLl5kj5E4-6">
+          <mxGeometry x="0.1444" y="2" relative="1" as="geometry">
+            <mxPoint x="-43" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-9" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;" edge="1" parent="1" source="4PMqVrFQ4jnjLl5kj5E4-19" target="4PMqVrFQ4jnjLl5kj5E4-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2410" y="930" />
+              <mxPoint x="1330" y="910" />
+            </Array>
+            <mxPoint x="1940" y="1000" as="sourcePoint" />
+            <mxPoint x="1540" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-10" value="NewFileWritePage(employeeList.ToList())" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4PMqVrFQ4jnjLl5kj5E4-9">
+          <mxGeometry x="0.1444" y="2" relative="1" as="geometry">
+            <mxPoint x="-19" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-11" value="Извеждане като текст" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2460" y="940" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-12" value="Извеждане като json" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2460" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-13" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;dashed=1;" edge="1" parent="1" source="4PMqVrFQ4jnjLl5kj5E4-8" target="4PMqVrFQ4jnjLl5kj5E4-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1950" y="1130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2400" y="1110" />
+              <mxPoint x="2300" y="1120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-14" value="NewFileWritePage(employeeList.ToList())" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4PMqVrFQ4jnjLl5kj5E4-13">
+          <mxGeometry x="-0.2667" relative="1" as="geometry">
+            <mxPoint x="-27" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-16" value="NewTaskPage:&lt;br&gt;newTaskPage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="1730" y="40" width="100" height="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-17" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="4PMqVrFQ4jnjLl5kj5E4-16">
+          <mxGeometry x="45" y="600" width="10" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-3" value="Създаване на нова задача" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1720" y="650" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-19" value="&lt;div&gt;PlanningPokerPage:&lt;/div&gt;newPokerPage" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="2210" y="40" width="120" height="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-20" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="4PMqVrFQ4jnjLl5kj5E4-19">
+          <mxGeometry x="55" y="700" width="10" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-4" value="Оценяване на задачата" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="760" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-5" value="&lt;div&gt;Записване на данните на&lt;/div&gt;&lt;div&gt;задачата&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="2210" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-21" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;elbow=vertical;curved=0;dashed=1;" edge="1" parent="1" source="4PMqVrFQ4jnjLl5kj5E4-20" target="4PMqVrFQ4jnjLl5kj5E4-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2260" y="1120" as="sourcePoint" />
+            <mxPoint x="2020" y="1120" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2145" y="1120" />
+              <mxPoint x="2045" y="1130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-22" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4PMqVrFQ4jnjLl5kj5E4-21">
+          <mxGeometry x="-0.2667" relative="1" as="geometry">
+            <mxPoint x="-27" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-23" value="" style="endArrow=classic;html=1;rounded=0;dashed=1;" edge="1" parent="1" target="O8Y2yQ0MNWPU1Q-F4xDI-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1780" y="1130" as="sourcePoint" />
+            <mxPoint x="1300" y="1130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1425" y="1130" />
+              <mxPoint x="1365" y="1130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4PMqVrFQ4jnjLl5kj5E4-24" value="NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="4PMqVrFQ4jnjLl5kj5E4-23">
+          <mxGeometry x="0.1242" relative="1" as="geometry">
+            <mxPoint x="25" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
