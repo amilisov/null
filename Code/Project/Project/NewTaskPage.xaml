@@ -26,11 +26,11 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" FontSize="18" TextWrapping="Wrap">
             Моля, въведете името и описанието на задачата:
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1"
-                   TextAlignment="Center" VerticalAlignment="Center" FontSize="18">
+                   TextAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap">
             Име на задача:
         </TextBlock>
         <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1"
@@ -42,7 +42,7 @@
                  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
                  HorizontalAlignment="Stretch"
                  VerticalContentAlignment="Center"
-                 x:Name="TaskName">
+                 x:Name="TaskName" TextWrapping="Wrap">
         </TextBox>
         <TextBox
                  Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2"

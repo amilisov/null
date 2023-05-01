@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
-        Title="Planning Poker" Height="450" Width="800">
+        Title="Planning Poker" Height="450" Width="820" MinHeight="400" MinWidth="600">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
@@ -22,7 +22,6 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
-
 
         <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3"
                    HorizontalAlignment="Center" 
@@ -47,13 +46,13 @@
                  x:Name="ProjectNameInput" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                 Margin="0 20 0 20">
+                 Margin="0 20 0 20" TextWrapping="Wrap">
         </TextBox>
         <TextBox Grid.Column="2" Grid.Row="3" 
                  x:Name="ScrumMasterName" 
                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                 Margin="0 20 0 20">
+                 Margin="0 20 0 20" TextWrapping="Wrap">
         </TextBox>
 
         <Button Grid.Column="2" Grid.Row="4" 
