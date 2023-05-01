@@ -26,13 +26,13 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" FontSize="18" TextWrapping="Wrap">
             Добре дошли в 
             <Run Text = "{Binding ProjectName, Mode=OneTime}"/>! <LineBreak/>
             Моля, добавете участниците:
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Stretch"
-                   TextAlignment="Center" FontSize="18" Margin="0 20 0 20">
+                   TextAlignment="Center" FontSize="18" Margin="0 20 0 20" TextWrapping="Wrap">
             Име на участник:
         </TextBlock>
         <DockPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch">
@@ -40,13 +40,14 @@
                      HorizontalAlignment="Stretch"
                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                      x:Name="PersonNameInput" x:FieldModifier="public"
-                     KeyUp="Input_EnterKeyPressed">
+                     KeyDown="Input_EnterKeyPressed" TextWrapping="Wrap">
             </TextBox>
         </DockPanel>
 
         <ScrollViewer Grid.Column="1" Grid.ColumnSpan="3"
                       Grid.Row="2"  Grid.RowSpan="4"
-                      VerticalScrollBarVisibility="Auto">
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Auto">
             <ItemsControl  HorizontalAlignment="Stretch"
                         x:Name="NamesListOutput"
                         ItemsSource="{Binding ScrollViewItems}"
