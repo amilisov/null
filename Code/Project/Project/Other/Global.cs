@@ -15,14 +15,12 @@ namespace Project.Other
         public static string ScrumMasterName = "";
         public static List<Task> Tasks = new List<Task>();
         public static Window? Window = null;
-        static Global()
-        {
-        }
+
         public static bool ValidateText(string text)
         {
             if (string.IsNullOrEmpty(text.Trim()))
             {
-                // not valid if string is null or empty
+                // Not valid if string is null or empty
                 return false;
             }
             else
@@ -31,11 +29,11 @@ namespace Project.Other
 
                 if (Char.IsDigit(chars[0]))
                 {
-                    // not valid if first char is numeric
+                    // Not valid if first char is numeric
                     return false;
                 }
 
-                // valid
+                // Valid
                 return true;
             }
         }
