@@ -22,6 +22,7 @@ namespace Project
         {
             if (string.IsNullOrEmpty(text.Trim()))
             {
+                // not valid if string is null or empty
                 return false;
             }
             else
@@ -30,9 +31,11 @@ namespace Project
 
                 if (Char.IsDigit(chars[0]))
                 {
+                    // not valid if first char is numeric
                     return false;
                 }
 
+                // valid
                 return true;
             }
         }

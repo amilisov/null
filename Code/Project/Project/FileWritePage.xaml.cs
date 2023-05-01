@@ -77,7 +77,6 @@ namespace Project
 
         private void JsonExport(object sender, RoutedEventArgs e)
         {
-
             var dialog = new FolderBrowserDialog();
             DialogResult result = dialog.ShowDialog();
 

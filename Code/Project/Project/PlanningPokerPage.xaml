@@ -51,7 +51,7 @@
 
         <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
                    TextAlignment="Center" FontSize="18">
-           Оценка на задача: 
+           Предложена оценка на задача: 
             <TextBlock x:Name="AverageRating" Text = "{Binding TaskRating, Mode=OneTime}" />
         </TextBlock>
 
