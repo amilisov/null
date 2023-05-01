@@ -39,7 +39,8 @@
             <TextBox Margin="0 20 0 20"
                      HorizontalAlignment="Stretch"
                      HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                     x:Name="PersonNameInput" KeyUp="Input_EnterKeyPressed">
+                     x:Name="PersonNameInput" x:FieldModifier="public"
+                     KeyUp="Input_EnterKeyPressed">
             </TextBox>
         </DockPanel>
 

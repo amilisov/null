@@ -14,6 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.Interfaces;
+using Project.Other;
+using Task = Project.Other.Task;
 
 namespace Project
 {
@@ -26,8 +29,8 @@ namespace Project
         private string taskDescription = "";
         private int taskRating = 0;
         private ObservableCollection<string> employeeList = new ObservableCollection<string>();
-        private ObservableCollection<int> ratingList = new ObservableCollection<int>() {0, 1, 2, 3, 5, 8, 13, 20, 40, 100};
-        private List<DockPanel> dockPanels = new List<DockPanel>();
+        public readonly ObservableCollection<int> ratingList = new ObservableCollection<int>() {0, 1, 2, 3, 5, 8, 13, 20, 40, 100};
+        public readonly List<DockPanel> dockPanels = new List<DockPanel>();
 
         public void NewPlanningPokerPage(string taskName, string taskDescription, ObservableCollection<string> employeeList)
         {
@@ -42,16 +45,16 @@ namespace Project
             
             InitializeComponent();
 
-            // add every employee
+            // Add every employee
             foreach (var employee in this.employeeList)
             {
-                // create new panel to grou employee and rating
+                // Create new panel to grou employee and rating
                 DockPanel stackPanel = new DockPanel()
                 {
                     Margin = new Thickness(0,5,0,5),
                     Name = employee
                 };
-                // create new box to store rating
+                // Create new box to store rating
                 ComboBox ratingBox = new ComboBox()
                 {
                     ItemsSource = ratingList,
@@ -62,10 +65,10 @@ namespace Project
                     MaxHeight = 20
                 };
 
-                // add handler for selection value changed
+                // Add handler for selection value changed
                 ratingBox.SelectionChanged += new SelectionChangedEventHandler(Fibonacci_SelectionChanged);
 
-                // create new box to display user
+                // Create new box to display user
                 TextBlock employeeBlock = new TextBlock()
                 {
                     Text = employee,
@@ -74,11 +77,11 @@ namespace Project
                     MaxWidth = 200
                 };
 
-                // add employee and rating to group panel
+                // Add employee and rating to group panel
                 stackPanel.Children.Add(employeeBlock);
                 stackPanel.Children.Add(ratingBox);
 
-                // add group panel to main panel
+                // Add group panel to main panel
                 Dock.Children.Add(stackPanel);
 
                 dockPanels.Add(stackPanel);
@@ -87,24 +90,21 @@ namespace Project
             this.DataContext = this;
             Global.Window.Content = this;
         }
-
         public string TaskName { get {  return taskName; } }
         public string TaskDescription { get {  return taskDescription; } }
         public ObservableCollection<string> EmployeeList { get {  return employeeList; } }
         public ObservableCollection<int> fibonacciList { get { return ratingList; } }
         public string ScrumMasterName { get { return Global.ScrumMasterName; } }
         public int TaskRating { get { return taskRating; } set { taskRating = value; } }
-
-        private void ClearSelection(object sender, RoutedEventArgs e)
+        public void ClearSelection(object sender, RoutedEventArgs e)
         {
-            // set every rating to 0 when clicked
+            // Set every rating to 0 when clicked
             foreach (var stackPanel in dockPanels)
             {
                 ComboBox dropdown = stackPanel.Children.OfType<ComboBox>().Single();
                 dropdown.SelectedValue = ratingList[0];
             }
         }
-
         private void Fibonacci_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int val = 0;
@@ -112,7 +112,7 @@ namespace Project
             double avg = 0;
             foreach (var stackPanel in dockPanels)
             {
-                // calculate sum for all ratings
+                // Calculate sum for all ratings
                 ComboBox dropdown = stackPanel.Children.OfType<ComboBox>().Single();
                 Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
                 sum += val;
@@ -120,7 +120,7 @@ namespace Project
 
             if(dockPanels.Count > 0)
             {
-                // calculate average rating
+                // Calculate average rating
                 TaskRating = (int)Math.Ceiling(sum / dockPanels.Count);
                 avg = Math.Round((sum / dockPanels.Count),1);
             }
@@ -129,7 +129,7 @@ namespace Project
             {
                 if(num >= TaskRating)
                 {
-                    // get closest number from rating list,
+                    // Get closest number from rating list,
                     TaskRating = num;
                     break;
                 }
@@ -137,7 +137,6 @@ namespace Project
 
             AverageRating.Text = TaskRating.ToString() + " (" + avg.ToString() + ")";
         }
-
         private void NewTask(object sender, RoutedEventArgs e)
         {
             int val = -1;
@@ -146,7 +145,7 @@ namespace Project
             Boolean error = false;
             foreach (var stackPanel in dockPanels)
             {
-                // check if all users agree on a rating
+                // Check if all users agree on a rating
                 ComboBox dropdown = stackPanel.Children.OfType<ComboBox>().Single();
                 Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
                 if(prevVal != -1)
@@ -162,7 +161,7 @@ namespace Project
 
             if(error == false)
             {
-                // if all users agree, create new task window
+                // If all users agree, create new task window
                 Task task = new Task();
                 task.Name = TaskName;
                 task.Description = TaskDescription;
@@ -175,11 +174,10 @@ namespace Project
             }
             else
             {
-                // if users don't agree, display popup
+                // If users don't agree, display popup
                 MessageBox.Show("Всички участници трябва да се съгласят на еднаква оценка!", "Разлика в оценките");
             }
         }
-
         private void LoadNextPage(object sender, RoutedEventArgs e)
         {
             int val = -1;
@@ -188,7 +186,7 @@ namespace Project
             Boolean error = false;
             foreach (var stackPanel in dockPanels)
             {
-                // check if all users agree on a rating
+                // Check if all users agree on a rating
                 ComboBox dropdown = stackPanel.Children.OfType<ComboBox>().Single();
                 Int32.TryParse(dropdown.SelectedValue.ToString(), out val);
                 if (prevVal != -1)
@@ -204,7 +202,7 @@ namespace Project
 
             if (error == false)
             {
-                // if all users agree, create new file window
+                // If all users agree, create new file window
                 Task task = new Task();
                 task.Name = TaskName;
                 task.Description = TaskDescription;
@@ -217,7 +215,7 @@ namespace Project
             }
             else
             {
-                // if users don't agree, display popup
+                // If users don't agree, display popup
                 MessageBox.Show("Всички участници трябва да се съгласят на еднаква оценка!", "Разлика в оценките");
             }
         }

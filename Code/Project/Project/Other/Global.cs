@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
 
-namespace Project
+namespace Project.Other
 {
     public static class Global
     {

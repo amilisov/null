@@ -1,4 +1,6 @@
 ﻿using Microsoft.VisualBasic;
+using Project.Interfaces;
+using Project.Other;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -44,7 +46,7 @@ namespace Project
             this.DataContext = this;
             Global.Window.Content = this;
         }
-        private void AddPersonButton(object sender, RoutedEventArgs e)
+        public void AddPersonButton(object sender, RoutedEventArgs e)
         {
             if(true == Global.ValidateText(PersonNameInput.Text))
             {
@@ -64,7 +66,7 @@ namespace Project
                 MessageBox.Show("Невалидно име! \nИмето не трябва да е празно или да започва с число.", "Невалидно име на участник");
             }
         }
-        private void RemovePersonButton(object sender, RoutedEventArgs e)
+        public void RemovePersonButton(object sender, RoutedEventArgs e)
         {
             if(ScrollViewItems.Count > 0)
             {

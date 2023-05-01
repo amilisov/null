@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.Interfaces;
+using Project.Other;
 
 namespace Project
 {
@@ -38,7 +40,7 @@ namespace Project
             }
             else
             {
-                // if everything is ok, create new page
+                // If everything is ok, create new page
                 Global.ProjectName = ProjectNameInput.Text;
                 Global.ScrumMasterName = ScrumMasterName.Text;
 

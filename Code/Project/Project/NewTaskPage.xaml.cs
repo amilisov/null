@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Project.Interfaces;
+using Project.Other;
 
 namespace Project
 {
@@ -45,7 +47,7 @@ namespace Project
                 {
                     if(Global.ValidateText(TaskDescription.Text))
                     {
-                        // create new page if all is ok
+                        // Create new page if all is ok
                         IPlanningPokerPage newPokerPage = new PlanningPokerPage();
                         newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
                     }
