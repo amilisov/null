@@ -52,23 +52,25 @@ namespace Project
             {
                 if (null == ScrollViewItems.FirstOrDefault(x => string.Equals(x, PersonNameInput.Text)))
                 {
+                    // add user to list if they are not already on it and if their name is valid
                     ScrollViewItems.Add(PersonNameInput.Text);
                     PersonNameInput.Text = "";
                 }
                 else
                 {
-                    MessageBox.Show("Participant present in list! Please input a different name", "Participant present");  
+                    MessageBox.Show("Участникът вече е в списъка! Моля въведете друго име.", "Участникът вече е добавен");  
                 }
             }
             else
             {
-                MessageBox.Show("Name cannot be empty", "Participant without name");
+                MessageBox.Show("Невалидно име! \nИмето не трябва да е празно или да започва с число.", "Невалидно име на участник");
             }
         }
         public void RemovePersonButton(object sender, RoutedEventArgs e)
         {
             if(ScrollViewItems.Count > 0)
             {
+                // remove last user from list if list is not empty
                 ScrollViewItems.Remove(ScrollViewItems.Last());
             }
         }
@@ -77,8 +79,13 @@ namespace Project
         {
             if(ScrollViewItems.Count > 0)
             {
+                // if there are valid users added, create new page
                 INewTaskPage newTaskPage = new NewTaskPage();
                 newTaskPage.NewTaskPage(ScrollViewItems);
+            }
+            else
+            {
+                MessageBox.Show("Трябва да има поне един въведен участник.", "Невалиден брой участници");
             }
         }
 
@@ -86,6 +93,7 @@ namespace Project
         {
             if (e.Key == Key.Enter)
             {
+                // if enter key is pressed, add new user
                 AddPersonButton(sender, new RoutedEventArgs());
             }
         }

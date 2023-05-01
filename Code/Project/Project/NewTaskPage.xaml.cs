@@ -41,22 +41,29 @@ namespace Project
 
         private void NextPageButton(object sender, RoutedEventArgs e)
         {
-            if (Global.ValidateText(TaskName.Text) &&
-                Global.ValidateText(TaskDescription.Text))
+            if (Global.ValidateText(TaskName.Text))
             {
                 if (null == Global.Tasks.FirstOrDefault(x => string.Equals(x.Name, TaskName.Text)))
                 {
-                    IPlanningPokerPage newPokerPage = new PlanningPokerPage();
-                    newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
+                    if(Global.ValidateText(TaskDescription.Text))
+                    {
+                        // Create new page if all is ok
+                        IPlanningPokerPage newPokerPage = new PlanningPokerPage();
+                        newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Невалидно описание на задача! \nОписанието не трябва да е празно или да започва с цифра.", "Невалидно описание на задача");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Task with the same name already exists!", "Task exists");
+                    MessageBox.Show("Задача със същото име вече съществува!", "Задачата съществува");
                 }
             }
             else
             {
-                MessageBox.Show("Task name or description is empty!", "Task empty");
+                MessageBox.Show("Невалидно име на задача! \nИмето не трябва да е празно или да започва с цифра.", "Невалидно име на задача");
             }
         }
     }

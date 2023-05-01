@@ -49,16 +49,16 @@ namespace Project
 
             if(result == DialogResult.OK)
             {
-                string path = dialog.SelectedPath + "\\SCRUM Session " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".txt";
+                string path = dialog.SelectedPath + "\\SCRUM Сесия " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".txt";
                 StreamWriter writer = new StreamWriter(path);
 
                 writer.WriteLine(DateTime.Now.ToString());
                 writer.WriteLine("==================================");
-                writer.WriteLine("Project: " + Global.ProjectName);
+                writer.WriteLine("Проект: " + Global.ProjectName);
                 writer.WriteLine("SCRUM master: " + Global.ScrumMasterName);
                 writer.WriteLine("==================================");
 
-                writer.WriteLine("Attendance list:");
+                writer.WriteLine("Участници:");
                 foreach (var employee in employees)
                 {
                     writer.WriteLine(employee);
@@ -69,24 +69,23 @@ namespace Project
                 {
                     writer.WriteLine(task.Name);
                     writer.WriteLine(task.Description);
-                    writer.WriteLine("Story points: " + task.Rating);
+                    writer.WriteLine("Точки на историята: " + task.Rating);
                     writer.WriteLine("==================================");
                 }
 
-                writer.WriteLine("Generated " + Global.Tasks.Count + " tasks");
+                writer.WriteLine("Генерирани " + Global.Tasks.Count + " задачи");
                 writer.Close();
             }
         }
 
         private void JsonExport(object sender, RoutedEventArgs e)
         {
-
             var dialog = new FolderBrowserDialog();
             DialogResult result = dialog.ShowDialog();
 
             if (result == DialogResult.OK)
             {
-                string path = dialog.SelectedPath + "\\SCRUM Session " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".json";
+                string path = dialog.SelectedPath + "\\SCRUM Сесия " + Global.ProjectName + " " + DateTime.Now.ToString("dd/MM/yyyy") + ".json";
                 StreamWriter writer = new StreamWriter(path);
 
                 JsonOutput json = new JsonOutput
