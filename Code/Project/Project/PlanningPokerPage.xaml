@@ -25,12 +25,12 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3"
+        <TextBlock Grid.Row="0" Grid.Column="2" TextWrapping="Wrap" Grid.ColumnSpan="3"
                    TextAlignment="Center" FontSize="18">
            Scrum master: <Run Text = "{Binding ScrumMasterName, Mode=OneTime}"/>
         </TextBlock>
         <TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" TextWrapping="Wrap" FontSize="18">
            Задача: <Run Text = "{Binding TaskName, Mode=OneTime}"/>
         </TextBlock>
         <ScrollViewer Grid.Column="2" Grid.ColumnSpan="3"
@@ -50,7 +50,7 @@
         </ScrollViewer>
 
         <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" TextWrapping="Wrap" FontSize="18">
            Предложена оценка на задача: 
             <TextBlock x:Name="AverageRating" Text = "{Binding TaskRating, Mode=OneTime}" />
         </TextBlock>

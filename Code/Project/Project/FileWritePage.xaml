@@ -26,11 +26,11 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" FontSize="18" TextWrapping="Wrap">
            Успешно създадохте <Run Text = "{Binding TaskCount, Mode=OneTime}"/> задачи
         </TextBlock>
         <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
-                   TextAlignment="Center" FontSize="18">
+                   TextAlignment="Center" FontSize="18" TextWrapping="Wrap">
            Ако желаете, можете да запишете задачите във файлове
         </TextBlock>
 
