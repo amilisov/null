@@ -38,6 +38,7 @@ namespace Project
             }
             else
             {
+                // if everything is ok, create new page
                 Global.ProjectName = ProjectNameInput.Text;
                 Global.ScrumMasterName = ScrumMasterName.Text;
 

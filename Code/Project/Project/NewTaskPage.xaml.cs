@@ -45,6 +45,7 @@ namespace Project
                 {
                     if(Global.ValidateText(TaskDescription.Text))
                     {
+                        // create new page if all is ok
                         IPlanningPokerPage newPokerPage = new PlanningPokerPage();
                         newPokerPage.NewPlanningPokerPage(TaskName.Text, TaskDescription.Text, employees);
                     }
