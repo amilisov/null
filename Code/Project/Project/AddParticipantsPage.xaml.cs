@@ -52,7 +52,7 @@ namespace Project
             {
                 if (null == ScrollViewItems.FirstOrDefault(x => string.Equals(x, PersonNameInput.Text)))
                 {
-                    // add user to list if they are not already on it and if their name is valid
+                    // Add user to list if they are not already on it and if their name is valid
                     ScrollViewItems.Add(PersonNameInput.Text);
                     PersonNameInput.Text = "";
                 }
@@ -70,7 +70,7 @@ namespace Project
         {
             if(ScrollViewItems.Count > 0)
             {
-                // remove last user from list if list is not empty
+                // Remove last user from list if list is not empty
                 ScrollViewItems.Remove(ScrollViewItems.Last());
             }
         }
@@ -79,7 +79,7 @@ namespace Project
         {
             if(ScrollViewItems.Count > 0)
             {
-                // if there are valid users added, create new page
+                // If there are valid users added, create new page
                 INewTaskPage newTaskPage = new NewTaskPage();
                 newTaskPage.NewTaskPage(ScrollViewItems);
             }
@@ -93,7 +93,7 @@ namespace Project
         {
             if (e.Key == Key.Enter)
             {
-                // if enter key is pressed, add new user
+                // If enter key is pressed, add new user
                 AddPersonButton(sender, new RoutedEventArgs());
             }
         }

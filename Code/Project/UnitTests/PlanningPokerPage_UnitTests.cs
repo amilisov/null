@@ -21,11 +21,11 @@ namespace UnitTests
             // Act
 
             // Assert
-            Assert.AreEqual(requiredBySpec.Count(), Page.fibonnaciList.Count());
+            Assert.AreEqual(requiredBySpec.Count(), Page.ratingList.Count());
 
             foreach(var req in requiredBySpec)
             {
-                Assert.IsTrue(Page.fibonnaciList.Contains(req));
+                Assert.IsTrue(Page.ratingList.Contains(req));
             }
         }
 

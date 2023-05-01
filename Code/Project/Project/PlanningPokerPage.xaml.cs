@@ -92,10 +92,8 @@ namespace Project
         }
         public string TaskName { get {  return taskName; } }
         public string TaskDescription { get {  return taskDescription; } }
-        public ObservableCollection<string> EmployeeList { get {  return employeeList; } }
-        public ObservableCollection<int> fibonacciList { get { return ratingList; } }
         public string ScrumMasterName { get { return Global.ScrumMasterName; } }
-        public int TaskRating { get { return taskRating; } set { taskRating = value; } }
+        public int TaskRating { get { return taskRating; } }
         public void ClearSelection(object sender, RoutedEventArgs e)
         {
             // Set every rating to 0 when clicked
@@ -121,21 +119,21 @@ namespace Project
             if(dockPanels.Count > 0)
             {
                 // Calculate average rating
-                TaskRating = (int)Math.Ceiling(sum / dockPanels.Count);
+                taskRating = (int)Math.Ceiling(sum / dockPanels.Count);
                 avg = Math.Round((sum / dockPanels.Count),1);
             }
 
-            foreach (var num in fibonacciList)
+            foreach (var num in ratingList)
             {
-                if(num >= TaskRating)
+                if(num >= taskRating)
                 {
                     // Get closest number from rating list,
-                    TaskRating = num;
+                    taskRating = num;
                     break;
                 }
             }
 
-            AverageRating.Text = TaskRating.ToString() + " (" + avg.ToString() + ")";
+            AverageRating.Text = taskRating.ToString() + " (" + avg.ToString() + ")";
         }
         private void NewTask(object sender, RoutedEventArgs e)
         {
@@ -165,8 +163,8 @@ namespace Project
                 Task task = new Task();
                 task.Name = TaskName;
                 task.Description = TaskDescription;
-                task.Rating = TaskRating;
-
+                task.Rating = taskRating;
+                    
                 Global.Tasks.Add(task);
 
                 INewTaskPage newTaskPage = new NewTaskPage();
@@ -206,7 +204,7 @@ namespace Project
                 Task task = new Task();
                 task.Name = TaskName;
                 task.Description = TaskDescription;
-                task.Rating = TaskRating;
+                task.Rating = taskRating;
 
                 Global.Tasks.Add(task);
 
